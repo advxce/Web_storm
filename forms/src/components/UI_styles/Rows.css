@@ -1,0 +1,245 @@
+
+*{
+    font-size: 1.6vmin;
+}
+
+textarea{
+    resize: none;
+}
+
+.box{
+    border: 1px solid rgb(90, 202, 250);
+    background: black;
+    margin: 0.5% 0.5%;
+    color:rgb(90, 202, 250) ;
+    border-radius: 2vmin;
+    padding: 0.1% 1%;
+    align-items: center;
+}
+
+.ListForm{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+
+}
+
+.ListContainer{
+    width: 80%;
+
+    height: auto;
+    margin:2% 0%;
+}
+
+.Container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+}
+
+.number{
+    width: 4%;
+    height: 6vmin;
+    text-align: center;
+}
+
+.event{
+    width: 35%;
+    height: 6vmin;
+    display: flex;
+    vertical-align: center;
+}
+.contact{
+    width: 14.6%;
+    height: 6vmin;
+}
+
+.title{
+    width: 14.6%;
+    height: 6vmin;
+}
+.port{
+    width: 14.6%;
+    height: 6vmin;
+}
+
+.btn-outline-info {
+    height: 4.5vmin;
+    width: 3%;
+    border-radius: 1.5vmin;
+    color: rgb(90, 202, 250);
+    margin-left: 1%;
+    border: 1px solid rgb(90, 202, 250);
+}
+
+.for_next_btn{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.btn-primary {
+    margin: 1% 0%;
+    width: 30%;
+    height: 7vh;
+}
+
+.boxSize {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 50%;
+    max-height: 70vh;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: black;
+    border-radius: 4vmin;
+    border: 1px solid rgb(90, 202, 250);
+    overflow: auto;
+}
+
+.sizeContainer {
+    width: 100%;
+
+    height: 2vmin;
+    padding: 0%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup-box {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+}
+
+.box-for-email {
+    color: rgb(90, 202, 250);
+    width: 70%;
+}
+
+.close-icon {
+    content: "x";
+    cursor: pointer;
+    font-size: 2vmin;
+}
+
+.close {
+    display: flex;
+    margin:0.5% 3% 0% 0%;
+    justify-content: center;
+    background: black;
+    color: rgb(90, 202, 250);
+    align-items: center;
+    width: 2.5vmin;
+    height: 2.5vmin;
+    padding-bottom: 0.6%;
+    border-radius: 50%;
+    border: 1px solid  rgb(90, 202, 250);
+}
+
+label{
+    margin-bottom: 1%;
+}
+
+.for_submit_btn{
+    margin: 0% 3% 3% 3%;
+    width: 70%;
+}
+
+.email-boxes{
+    height: 4vmin;
+}
+
+.row7{
+    width:85%;
+    height: 5.8vmin;
+    borderRadius:0%;
+    background: black;
+    margin: 0 0 0 1%;
+    border-radius: 10px;
+    color: rgb(90, 202, 250);
+    border:none;
+}
+
+.padding--first{
+    padding-top: 1%;
+}
+.header-box{
+    text-align: center;
+}
+
+
+@media  screen and (max-width: 1024px) {
+    .email-boxes{
+        height: 10vmin;
+        margin: 0px;
+        font-size: 12px;
+
+
+    }
+    label{
+        font-size: 14px;
+        margin-bottom: 1%;
+    }
+    .row7{
+
+        height: 7.7vmin;
+
+        width: 100%;
+    }
+    .box-for-email{
+        padding: 0px;
+
+
+    }
+
+    .ListContainer{
+        width: 100%;
+    }
+
+    .box{
+        height: 8vmin;
+    }
+
+    .btn-outline-info{
+        width: auto;
+    }
+
+    .boxSize{
+        width: 90%;
+    }
+    .btn-primary{
+        font-size: 8px;
+        height: 10vmin;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    .box{
+        height: 15vmin;
+        font-size: 8px;
+    }
+    .row7{
+        padding-top: 3%;
+        height: 13.9vmin;
+
+
+    }
+    .padding--first{
+        padding-top: 4%;
+    }
+
+}
+
+
