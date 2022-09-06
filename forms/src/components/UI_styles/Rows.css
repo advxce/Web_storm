@@ -1,37 +1,38 @@
 
-*{
+* {
     font-size: 1.6vmin;
+    box-sizing: border-box;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-.box{
+.box {
     border: 1px solid rgb(90, 202, 250);
-    background: black;
-    margin: 0.5% 0.5%;
-    color:rgb(90, 202, 250) ;
+    background: none;
+    margin: 1.2% 1.2%;
+    color: rgb(90, 202, 250);
     border-radius: 2vmin;
     padding: 0.1% 1%;
     align-items: center;
 }
 
-.ListForm{
-    margin-left: 5%;
+.ListForm {
+    margin: 0 0 0 5%;
     display: flex;
     align-items: center;
 
 }
 
-.ListContainer{
+.ListContainer {
     width: 80%;
 
     height: auto;
-    margin:2% 0%;
+    margin: 1% 0%;
 }
 
-.Container{
+.Container {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -41,30 +42,28 @@ textarea{
     background: black;
 }
 
-.number{
-    width: 4%;
-    height: 6vmin;
-    text-align: center;
-}
 
-.event{
-    width: 35%;
-    height: 6vmin;
+.event {
+    width: 40%;
+    height: 7vmin;
     display: flex;
     vertical-align: center;
 }
-.contact{
+
+.contact {
     width: 14.6%;
-    height: 6vmin;
+    height: 7vmin;
 }
 
-.title{
+.title {
     width: 14.6%;
-    height: 6vmin;
+    height: 7vmin;
 }
-.port{
+
+.port {
     width: 14.6%;
-    height: 6vmin;
+    height: 7vmin;
+    padding: 0.1% 1%;
 }
 
 .btn-outline-info {
@@ -76,7 +75,7 @@ textarea{
     border: 1px solid rgb(90, 202, 250);
 }
 
-.for_next_btn{
+.for_next_btn {
     width: 80%;
     display: flex;
     justify-content: center;
@@ -95,8 +94,8 @@ textarea{
     flex-wrap: wrap;
     position: relative;
     width: 50%;
-    max-height: 70vh;
-    margin-top: calc(100vh - 85vh - 20px);
+    max-height: 85vh;
+    margin-top: calc(100vh - 88vh - 20px);
     background: black;
     border-radius: 4vmin;
     border: 1px solid rgb(90, 202, 250);
@@ -122,7 +121,7 @@ textarea{
     top: 0px;
 }
 
-.box-for-email {
+.box-for-form {
     color: rgb(90, 202, 250);
     width: 70%;
 }
@@ -135,7 +134,7 @@ textarea{
 
 .close {
     display: flex;
-    margin:0.5% 3% 0% 0%;
+    margin: 0.5% 3% 0% 0%;
     justify-content: center;
     background: black;
     color: rgb(90, 202, 250);
@@ -144,102 +143,149 @@ textarea{
     height: 2.5vmin;
     padding-bottom: 0.6%;
     border-radius: 50%;
-    border: 1px solid  rgb(90, 202, 250);
+    border: 1px solid rgb(90, 202, 250);
 }
 
-label{
+label {
     margin-bottom: 1%;
+    font-size: 12px;
 }
 
-.for_submit_btn{
+.for_submit_btn {
     margin: 0% 3% 3% 3%;
     width: 70%;
 }
 
-.email-boxes{
-    height: 4vmin;
+.email-boxes {
+    height: 7vmin;
+    margin: 0px;
+    font-size: 12px;
+
+
 }
 
-.row7{
-    width:85%;
+.row7 {
+    width: 85%;
     height: 5.8vmin;
-    borderRadius:0%;
+    borderRadius: 0%;
     background: black;
     margin: 0 0 0 1%;
     border-radius: 10px;
     color: rgb(90, 202, 250);
-    border:none;
+    border: none;
 }
 
-.padding--first{
+.padding--first {
     padding-top: 1%;
 }
-.header-box{
+
+.header-box {
     text-align: center;
 }
 
+.port--container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 7.2vmin;
+    margin-bottom: 0.3%;
+    width: 14.9%;
+    margin-left: 1%;
 
-@media  screen and (max-width: 1024px) {
-    .email-boxes{
+}
+
+@media screen and (max-width: 1024px) {
+    .email-boxes {
         height: 10vmin;
         margin: 0px;
-        font-size: 12px;
+        font-size: 10px;
 
 
     }
-    label{
-        font-size: 14px;
+
+    label {
+        font-size: 10px;
         margin-bottom: 1%;
     }
-    .row7{
+
+    .row7 {
 
         height: 7.7vmin;
 
         width: 100%;
     }
-    .box-for-email{
+
+    .box-for-form {
         padding: 0px;
 
 
     }
 
-    .ListContainer{
+    .ListContainer {
         width: 100%;
     }
 
-    .box{
+    .box {
         height: 8vmin;
     }
 
-    .btn-outline-info{
+    .btn-outline-info {
         width: auto;
     }
 
-    .boxSize{
-        width: 90%;
+    .boxSize {
+        width: 70%;
     }
-    .btn-primary{
+
+    .btn-primary {
         font-size: 8px;
         height: 10vmin;
     }
 
+    .port--container {
+        height: 8.1vmin;
+        margin-bottom: 0.3%;
+    }
+
 }
 
-@media screen and (max-width: 767px){
-    .box{
+@media screen and (max-width: 767px) {
+    .box {
         height: 15vmin;
         font-size: 8px;
     }
-    .row7{
+    .port--container {
+        height: 15.1vmin;
+        margin-bottom: 0.4%;
+        font-size: 8px;
+    }
+
+    .row7 {
         padding-top: 3%;
         height: 13.9vmin;
 
 
     }
-    .padding--first{
+
+    .padding--first {
         padding-top: 4%;
     }
+    .boxSize {
+        width: 75%;
+    }
 
+    .email-boxes {
+        height: 8vmin;
+        margin: 0px;
+        font-size: 10px;
+
+
+    }
+
+    label {
+        font-size: 10px;
+        margin-bottom: 1%;
+    }
 }
 
 

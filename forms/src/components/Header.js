@@ -1,17 +1,11 @@
 import React from "react";
 import "./UI_styles/Rows.css"
 
-function Header({ number, event, contact, title, port }) {
+function Header({ event, contact, title, port }) {
     return (
 
             <div className="ListForm">
-                <input
-                    readOnly
-                    type="text"
-                    name="num1"
-                    className="number box header-box"
-                    value={number}
-                ></input>
+
                 <input
                     readOnly
                     type="text"
