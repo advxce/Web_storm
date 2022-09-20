@@ -1,0 +1,63 @@
+.apm-container{
+    width: 100%;
+    border: 0.3vmax solid #679B9E;
+    border-radius: 3vmin;
+    margin-bottom: 3%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+}
+.arm-inside--container{
+    display: flex;
+
+    height: 4vmax;
+    align-items: center;
+
+}
+p{
+    margin: 0;
+    font-size: 1vmax;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: #13686E;
+}
+.line{
+    height: 100%;
+    background:  #679B9E;
+    width: 0.4%;
+    box-shadow: 0  -0.20vmax  #679B9E, 0  0.20vmax  #679B9E;
+
+}
+
+.apm-content{
+    align-items: center;
+    width: 6%;
+    margin: 3% 1.5% 3% 3% ;
+
+}
+.surname-content{
+    ;
+    margin: 0 1% 0 2.5%;
+}
+.surname-input{
+    width: 36%;
+}
+
+.black{
+    background: black;
+}
+.end{
+    background: rebeccapurple;
+}
+.hide-element{
+    position: absolute;
+    z-index: -100;
+    background: none;
+    border: none;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+}

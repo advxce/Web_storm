@@ -1,8 +1,8 @@
 import React from "react";
 import {useState} from "react";
-import "./UI_styles/Rows.css";
+import "./styles/StaticRows.css"
+
 import dataFile from "../dataFile";
-import PortFunc from "./PortFunc";
 
 
 function StaticRows(props) {
@@ -12,7 +12,7 @@ function StaticRows(props) {
     function handleChange(e) {
         setValue(prev => ({
                 ...prev,
-                [e.target.name]: e.target.value
+                [props.name]: e.target.value
 
             }
         ))
@@ -21,40 +21,18 @@ function StaticRows(props) {
 
     return (
 
-        <div className="ListForm">
-
-                <textarea
-                    readOnly="readonly"
-                    type="text"
-                    name="event"
-                    className="box event padding--first"
-                    value={props.event}
-
-                ></textarea>
-            <textarea
-                name="contact"
-                className="box contact form-control"
-                value={props.contact.contact}
+        <div className={!props.state ? "static-rows--container" : "static-rows--container-other"}>
+            <p className={!props.state ? "static-rows--content" : "static-rows--content-bool"}>{props.event}</p>
+            <input
+                required
                 type="text"
-                onChange={handleChange}
-                style={{background:"black",color:"rgb(90, 202, 250)"}}
-            ></textarea>
-            <textarea
-                name="title"
-                className="box title form-control"
+                name={props.name}
+                className={!props.state ? "static-rows--input" : "bool-rows--input"}
                 value={props.title.title}
-                type="text"
-                onChange={(e)=>{handleChange(e)}}
-                style={{background:"black",color:"rgb(90, 202, 250)"}}
-            ></textarea>
-
-
-            <PortFunc
-
-                portState = {props.portState}
-                setPortState = {props.portStateFunc}
-            ></PortFunc>
-
+                onChange={
+                    (e) => handleChange(e)
+                }
+            ></input>
 
         </div>
 

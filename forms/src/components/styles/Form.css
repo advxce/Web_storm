@@ -1,0 +1,108 @@
+
+
+*{
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+.form--container--outside{
+
+    background: rgba(73, 171, 204, 0.32);
+    margin: 2% 0 2% 0;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+}
+.form--container--inside{
+    margin: 5% 0 5% 0;
+    border-radius: 3vmin;
+    background: rgba(54, 173, 182, 0.18);
+    width: 90%;
+}
+.main--container{
+    margin: 7% 6%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main--content{
+    margin:0 0 3% 0 ;
+    font-size: 1vmax;
+    color: #13686E;
+    font-weight: bold;
+    font-family: "Roboto";
+}
+.button-send{
+    margin-top: 3%;
+    width: 15%;
+    border: none;
+    border-radius: 2.5vmin;
+    font-size: 1vmax;
+    font-family: Roboto;
+    color: #13686E;
+    background: rgba(255, 249, 249, 0.93);
+    padding: 1.5% 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.button-send:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.03);
+    border-radius: 1.3vmin;
+    box-shadow: 0 0 0.3vmax 0.3vmax rgba(73, 171, 204, 0.32);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.ant-message{
+    font-size: 1vmax;
+    display: flex;
+    line-height: 0;
+    justify-content: center;
+
+}
+svg{
+    font-size: 1.2vmax;
+    padding: 0;
+}
+.ant-message-notice-content{
+    display: flex;
+    color: red;
+    padding: 5px 7px;
+}
+.ant-message-custom-content{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.anticon-close-circle{
+    height: 100%;
+    display: flex;
+
+}
+
+.ant-message-warning{
+   color: black;
+}
+.anticon-exclamation-circle{
+
+}
+.ant-message .anticon{
+   top: 0
+}
+
+@media  screen and (max-width: 767px){
+    .form--container--outside{
+        width: 100%;
+        margin: 0;
+    }
+    .form--container--inside{
+        width: 88%;
+    }
+}

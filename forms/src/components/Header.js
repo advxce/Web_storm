@@ -1,40 +1,12 @@
 import React from "react";
-import "./UI_styles/Rows.css"
+import "./styles/Header.css"
 
-function Header({ event, contact, title, port }) {
+function Header(props) {
     return (
 
-            <div className="ListForm">
-
-                <input
-                    readOnly
-                    type="text"
-                    name="event1"
-                    className="event box header-box"
-                    value={event}
-                ></input>
-                <textarea
-                    readOnly
-                    type="text"
-                    name="contact1"
-                    className="contact box header-box"
-                    value={contact}
-                ></textarea>
-                <input
-                    readOnly
-                    type="text"
-                    name="title1"
-                    className="title box header-box"
-                    value={title}
-                ></input>
-                <input
-                    readOnly
-                    type="text"
-                    name="port1"
-                    className="port box header-box"
-                    value={port}
-                ></input>
-            </div>
+            <header className="header--container">
+                <div className="header--content">Опросник для подключения ПО 3DMeD</div>
+            </header>
 
     );
 }

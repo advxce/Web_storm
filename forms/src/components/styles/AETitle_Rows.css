@@ -1,0 +1,86 @@
+.title-main--container{
+
+    width: 100%;
+    border: 0.3vmax solid #679B9E;
+    border-radius: 3vmin;
+    margin-bottom: 3%;
+}
+.title-inside--container{
+    padding-left: 3%;
+    height: 4vmax;
+    display: flex;
+    align-items: center;
+}
+.title-sub--container{
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+.title--content{
+    margin: 5% 1% 5% 0;
+    font-size: 1vmax;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: #13686E;
+
+}
+.input{
+    background: none;
+    outline: none;
+    border: none;
+    color: #13686E;
+    font-size: 1vmax;
+    font-family: "Roboto";
+    font-weight: normal;
+    line-height: 1vmax;
+    box-shadow: 0 0.3vmax #679B9E;
+
+}
+.ae-input{
+    width: 21.3%;
+}
+.main--inputs{
+    margin-right: 4%;
+}
+.ip--input{
+    width: 5%;
+}
+.dot{
+    margin: 1.2% 1% 0 1%;
+    color: #679B9E;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 1.5vmax;
+}
+.port--input{
+    width: 15%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button-img{
+    width: 4%;
+    height:60%
+}
+
+.button-img:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.8;
+    transform: scale(1.1);
+    box-shadow: 0 0 0.3vmax 0.3vmax rgba(73, 171, 204, 0.32);
+}
+.hide-element{
+    position: absolute;
+    z-index: -100;
+    background: none;
+    border: none;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+}
+

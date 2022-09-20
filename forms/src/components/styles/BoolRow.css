@@ -1,0 +1,47 @@
+.bool-main--container{
+    border: 0.3vmax solid #679B9E;
+    width: 100%;
+    border-radius: 3vmin;
+    padding: 2% 3%;
+    margin-bottom: 3%;
+}
+.bool-inside--container{
+    display: flex;
+}
+.container-for-sub-rows{
+    display: flex;
+
+}
+.toggle--container{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.switch--ball{
+    display: flex;
+    margin: 7%;
+    border-radius: 50%;
+    width: 38%;
+    height: 65%;
+    background: #fff9f9;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+}
+.switch--container{
+    display: flex;
+    align-items: center;
+    width: 17%;
+    height: 80%;
+    border-radius: 40%;
+}
+
+.switch--container:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.03);
+    box-shadow: 0 0 0.3vmax 0.3vmax rgba(73, 171, 204, 0.32);
+    -webkit-transition: .4s;
+    transition: .4s;
+}

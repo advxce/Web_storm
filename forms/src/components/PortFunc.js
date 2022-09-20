@@ -1,66 +1,50 @@
 import React, {useEffect, useState} from 'react';
-
+import "./styles/AETitle_Rows.css"
 
 function PortFunc(props) {
-    const [valuePort, setValuePort] = useState("")
-
-    function checkPort(e) {
-        let port = e.target.value
-        port = port.substring(0, 16)
-        let length = port.length
-        let index = port.lastIndexOf(".") + 1
-        let counterDots = port.split(".").length - 1
-        let updatedPort = ""
-        if (length !== index && counterDots < 3 && (length - index) % 3 === 0) {
-            updatedPort = port + "."
-        } else if (counterDots > 3 || length - index > 3) {
-            let newString = port.substring(0, length - 1)
-            updatedPort = newString
-        } else {
-            updatedPort = port
-
-        }
-
-        setValuePort(updatedPort)
-
-    }
 
     function checkValid(name) {
-        if (name !== "") {
-            props.setPortState(true)
-        } else if (name === "") {
-
+        if (name.length < 15) {
             props.setPortState(false)
+        } else {
+            props.setPortState(true)
         }
+    }
+
+    const [name, setName] = useState({
+        main_port: ""
+    })
+
+    function prettier(stroke) {
+        stroke = stroke.substring(0, 12)
+        let dot = stroke.match(/.{1,3}/g)
+        let newString = ""
+        if (stroke.length !== 0) {
+            newString = dot.join(".")
+        }
+        checkValid(newString)
+        setName(prevState => ({
+            ...prevState, main_port: newString
+        }))
+    }
+
+
+    const onInput = event => {
+        event.target.value = event.target.value.replace(/[^0-9+]/g, '')
     }
 
     return (
-        <div className="port--container ">
-            <input
-                required
-                className="box port form-control"
-                type="text "
-                name="port"
-                value={valuePort}
-                style={{
-                    background: "black",
-                    color: "rgb(90, 202, 250)",
-                    width: "100%",
-                    height: "100%",
-                    padding: "0 0 0 5%"
-                }}
-                onChange={(e) => {
-                    checkPort(e)
-                    checkValid(e.target.value)
+        <input
+            required
+            value={name.main_port}
+            name="main_port"
+            onInput={onInput}
+            onChange={(e) => {
+                prettier(e.target.value)
+            }}
 
-                }}
-
-
-            />
-            <div className="invalid-feedback" style={{textAlign:"left",marginLeft:"2%"}}>Заполните поле</div>
-
-
-        </div>
+            className="input main--inputs port--input "
+        />
     );
 }
 
