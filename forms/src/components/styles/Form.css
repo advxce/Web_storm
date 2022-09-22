@@ -97,7 +97,7 @@ svg{
    top: 0
 }
 
-@media  screen and (max-width: 767px){
+@media  screen and (max-width: 490px){
     .form--container--outside{
         width: 100%;
         margin: 0;
