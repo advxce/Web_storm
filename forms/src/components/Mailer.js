@@ -177,7 +177,7 @@ function Mailer(props) {
                             ></input>
                             {isOpen === "open" && <Email_form handleClose={togglePopup}></Email_form>}
                         </div>
-
+                        <footer>контактное лицо от ООО "КометаРад" Кудырко Андрей, 8-029-5600-700, e-mail: a.kudyrko@comrad.by</footer>
 
                     </form>
                 </div>

@@ -97,6 +97,15 @@ svg{
    top: 0
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    font-size: 1vmax;
+    margin-bottom: 3%;
+    font-weight: bold;
+    font-family: Roboto;
+}
+
 @media  screen and (max-width: 490px){
     .form--container--outside{
         width: 100%;
