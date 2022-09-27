@@ -199,5 +199,12 @@ textarea {
         width: 100%;
     }
 }
-
+@media screen and (min-width: 727px) and (max-width: 1440px){
+    .pop-outside--container{
+        width: 97.5vw;
+    }
+    .box{
+        width: 100%;
+    }
+}
 
