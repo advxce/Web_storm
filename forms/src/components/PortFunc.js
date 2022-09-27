@@ -3,11 +3,11 @@ import "./styles/AETitle_Rows.css"
 
 function PortFunc(props) {
 
-    function checkValid(name) {
-        if (name.length < 15) {
-            props.setPortState(false)
-        } else {
+    function checkValid(word) {
+        if (word.length > 1) {
             props.setPortState(true)
+        } else {
+            props.setPortState(false)
         }
     }
 
@@ -16,12 +16,12 @@ function PortFunc(props) {
     })
 
     function prettier(stroke) {
-        stroke = stroke.substring(0, 12)
-        let dot = stroke.match(/.{1,3}/g)
-        let newString = ""
-        if (stroke.length !== 0) {
-            newString = dot.join(".")
-        }
+        let newString = stroke.substring(0, 5)
+        // let dot = stroke.match(/.{1,3}/g)
+        // let newString = ""
+        // if (stroke.length !== 0) {
+        //     newString = dot.join(".")
+        // }
         checkValid(newString)
         setName(prevState => ({
             ...prevState, main_port: newString
@@ -33,6 +33,7 @@ function PortFunc(props) {
         event.target.value = event.target.value.replace(/[^0-9+]/g, '')
     }
 
+    console.log(name)
     return (
         <input
             required

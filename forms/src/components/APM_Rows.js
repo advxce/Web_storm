@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useState} from "react";
 import "./styles/AETitle_Rows.css"
 import "./styles/APM.css"
@@ -17,6 +17,7 @@ function ApmRows(props) {
             APM_ip1: "",
             APM_ip2: "",
             APM_ip3: "",
+            APM_ip4: "",
             id: Date.now(),
         }],
     );
@@ -40,6 +41,7 @@ function ApmRows(props) {
                     APM_ip1: "",
                     APM_ip2: "",
                     APM_ip3: "",
+                    APM_ip4: "",
                     id: Date.now()
                 }
             ]
@@ -62,16 +64,20 @@ function ApmRows(props) {
     const [ip1, setIp1] = useState(false)
     const [ip2, setIp2] = useState(false)
     const [ip3, setIp3] = useState(false)
+    const [ip4, setIp4] = useState(false)
 
-    if (ip1 && ip2 && ip3) {
-        props.setIpAPM(true)
-    } else {
-        props.setIpAPM(false)
-    }
+    useEffect(()=>{
+        if (ip1 && ip2 && ip3 && ip4) {
+            props.setIpAPM(true)
+        } else {
+            props.setIpAPM(false)
+        }
+    },[ip1,ip2,ip3,ip4])
+
 
     const main = value.map((element, index) => {
 
-        let ipString = element.APM_ip1 + "." + element.APM_ip2 + "." + element.APM_ip3
+        let ipString = element.APM_ip1 + "." + element.APM_ip2 + "." + element.APM_ip3+ "." + element.APM_ip4
 
         return (
             <div className="arm-inside--container" key={index}>
@@ -119,7 +125,7 @@ function ApmRows(props) {
                 <div className="dot">.</div>
                 <input
                     required
-                    className="ip--input input main--inputs"
+                    className="ip--input input "
                     type="number"
                     onInput={onInput}
                     name="APM_ip3"
@@ -127,6 +133,20 @@ function ApmRows(props) {
                     onChange={(e) => {
                         e.target.value = e.target.value.substring(0, 3)
                         e.target.value.length < 3 ? setIp3(false) : setIp3(true)
+                        handleChange(index, e)
+                    }}
+                ></input>
+                <div className="dot">.</div>
+                <input
+                    required
+                    className="ip--input input main--inputs"
+                    type="number"
+                    onInput={onInput}
+                    name="APM_ip4"
+                    value={element.APM_ip4}
+                    onChange={(e) => {
+                        e.target.value = e.target.value.substring(0, 3)
+                        e.target.value.length < 3 ? setIp4(false) : setIp4(true)
                         handleChange(index, e)
                     }}
                 ></input>

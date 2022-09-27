@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {useState} from "react";
 import "./styles/AETitle_Rows.css"
 import PortFunc from "./PortFunc";
@@ -14,6 +14,7 @@ function AETitle_Rows(props) {
             AE_ip1: "",
             AE_ip2: "",
             AE_ip3: "",
+            AE_ip4:"",
             port: "",
             id: Date.now(),
         }],
@@ -36,6 +37,7 @@ function AETitle_Rows(props) {
                     AE_ip1: "",
                     AE_ip2: "",
                     AE_ip3: "",
+                    AE_ip4:"",
                     port: "",
                     id: Date.now()
                 }
@@ -55,18 +57,23 @@ function AETitle_Rows(props) {
     const [ip1, setIp1] = useState(false)
     const [ip2, setIp2] = useState(false)
     const [ip3, setIp3] = useState(false)
+    const [ip4, setIp4] = useState(false)
 
-    if (ip1 && ip2 && ip3) {
-        props.setIpAETitle(true)
-    } else {
-        props.setIpAETitle(false)
-    }
+    useEffect(()=>{
+            if (ip1 && ip2 && ip3 && ip4) {
+                props.setIpAETitle(true)
+            } else {
+                props.setIpAETitle(false)
+            }
+    },
+        [ip1,ip2,ip3,ip4])
+
 
     return (
         <div className="title-main--container">
             {value.map((element, index) => {
 
-                let ipString = element.AE_ip1 + "." + element.AE_ip2 + "." + element.AE_ip3
+                let ipString = element.AE_ip1 + "." + element.AE_ip2 + "." + element.AE_ip3 + "." + element.AE_ip4
 
                 return (
 
@@ -119,7 +126,7 @@ function AETitle_Rows(props) {
                         <input
                             required
                             onInput={onInput}
-                            className="ip--input input main--inputs"
+                            className="ip--input input"
                             type="number"
                             name="AE_ip3"
                             value={element.AE_ip3}
@@ -128,6 +135,21 @@ function AETitle_Rows(props) {
                                 e.target.value.length < 3 ? setIp3(false) : setIp3(true)
                                 handleChange(index, e)
 
+                            }}
+
+                        ></input>
+                        <div className="dot">.</div>
+                        <input
+                            required
+                            onInput={onInput}
+                            className="ip--input input main--inputs"
+                            type="number"
+                            name="AE_ip4"
+                            value={element.AE_ip4}
+                            onChange={(e) => {
+                                e.target.value = e.target.value.substring(0, 3)
+                                e.target.value.length < 3 ? setIp4(false) : setIp4(true)
+                                handleChange(index, e)
                             }}
 
                         ></input>

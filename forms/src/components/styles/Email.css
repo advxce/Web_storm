@@ -190,10 +190,10 @@ textarea {
 
 @media screen and (min-width: 1440px){
     .pop--container{
-        width: 100vw;
+        /*width: 100vw;*/
     }
     .pop-outside--container{
-        width: 100vw;
+        width: 99vw;
     }
     .box{
         width: 100%;

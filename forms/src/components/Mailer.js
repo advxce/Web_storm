@@ -51,7 +51,7 @@ function Mailer(props) {
 
     const warning_Ip = () => {
         message.warning({
-            content: 'Поле "IP" должно содержать 9 символов',
+            content: 'Поле "IP" должно содержать 12 символов',
             style: {
                 position: "absolute",
                 left: "34vw",
@@ -124,6 +124,9 @@ function Mailer(props) {
     const errorMsg = () => {
         error()
     }
+
+    console.log("ipARM"+ ipAPM)
+    console.log("ipAETitle"+ ipAETitle)
 
     return (
         <div className="page">
