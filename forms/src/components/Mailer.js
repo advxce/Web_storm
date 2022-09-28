@@ -31,7 +31,7 @@ function Mailer(props) {
             style: {
                 position: "absolute",
                 left: "34vw",
-                width: "32%"
+                width: "33%"
             },
             duration: 2
 
@@ -39,7 +39,7 @@ function Mailer(props) {
     };
     const warning_port = () => {
         message.warning({
-            content: 'Поле "Порт" должно содержать 12 символов',
+            content: 'Поле "Порт" должно содержать от 2 до 5 символов',
             style: {
                 position: "absolute",
                 left: "34vw",

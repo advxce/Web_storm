@@ -13,17 +13,16 @@
 .form--container--outside{
 
     background: rgba(73, 171, 204, 0.32);
-    margin: 2% 0 2% 0;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 .form--container--inside{
     margin: 5% 0 5% 0;
     border-radius: 3vmin;
     background: rgba(54, 173, 182, 0.18);
-    width: 90%;
+    width: 70%;
 }
 .main--container{
     margin: 7% 6%;

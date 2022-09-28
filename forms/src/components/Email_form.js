@@ -88,8 +88,8 @@ function Email_form(props) {
     }
 
     return (
-        <div className="container pop--container">
-
+        <div className="pop--container">
+            <div className="container">
             <div className="pop-outside--container">
                 <div className="image--container">
                     <img
@@ -164,7 +164,7 @@ function Email_form(props) {
 
             </div>
 
-
+            </div>
         </div>
 
     );
